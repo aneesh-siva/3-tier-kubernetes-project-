@@ -29,22 +29,37 @@ The goal of this project is to demonstrate containerization, Kubernetes deployme
           
 **Kubernetes Components Used**
 
-**Components**	        **Purpose**
+  Deployment:- Manages application pods
 
-  Deployment	        Manages application pods
-  Service	            Enables communication between pods
-  Namespace	          Isolates application resources
-  Docker	            Containerization of applications
-  Minikube	          Local Kubernetes cluster
+  
+  Service:- Enables communication between pods
+
+  
+  Namespace :- Isolates application resources
+
+  
+  Docker:- Containerization of applications
+  
+  
+  Minikube :- Local Kubernetes cluster
+
+  
 
 **🧰 Tech Stack**
 
-**Technology**	         **Usage**
-   Docker	            Containerization
-   Kubernetes	        Container orchestration
-   Minikube	          Local Kubernetes environment
-   Python Flask	      Backend & Frontend services
-   MongoDB	          NoSQL database
+   Docker :- Containerization
+
+   
+   Kubernetes :- Container orchestration
+
+   
+   Minikube :- Local Kubernetes environment
+
+   
+   Python Flask :- Backend & Frontend services
+
+   
+   MongoDB :- NoSQL database
 
 
 **📂 Project Structure**
