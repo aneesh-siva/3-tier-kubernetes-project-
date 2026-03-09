@@ -26,6 +26,8 @@ The goal of this project is to demonstrate containerization, Kubernetes deployme
              │
              ▼
           MongoDB
+
+
           
 **Kubernetes Components Used**
 
@@ -141,22 +143,39 @@ Services
 Logs
 Resource usage
 
+
 **🎯 Key Learning Outcomes**
 
 ✔ Containerizing applications using Docker
+
+
 ✔ Deploying multi-tier applications on Kubernetes
+
+
 ✔ Managing Kubernetes Deployments and Services
+
+
 ✔ Using namespaces for resource isolation
+
+
 ✔ Running Kubernetes locally with Minikube
+
+
 
 **🚀 Future Improvements**
 
 Possible enhancements for this project:
 
 Implement CI/CD pipeline using GitHub Actions
+
+
 Add monitoring stack using Prometheus and Grafana
+
+
 Configure Ingress Controller for domain-based routing
-Deploy to a cloud Kubernetes service such as Amazon EKS
+
+
+Deploy to a cloud Kubernetes service such as Azure AKS
 
 **👤 Author**
 Aneesh.S
