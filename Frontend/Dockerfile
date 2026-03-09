@@ -1,12 +1,13 @@
-from flask import Flask
-import requests
+FROM node:18
 
-app = Flask(__name__)
+WORKDIR /app
 
-@app.route("/")
-def home():
-    response = requests.get("http://backend-service:5000")
-    return f"<h1>Frontend</h1><p>{response.text}</p>"
+COPY package.json .
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=3000) 
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm","start"]
