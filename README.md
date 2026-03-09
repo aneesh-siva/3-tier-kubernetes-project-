@@ -86,6 +86,8 @@ The goal of this project is to demonstrate containerization, Kubernetes deployme
 │   └── frontend-deployment.yaml
 │
 └── README.md
+
+
 🐳 Docker Image Build
 
 **Build the application images locally.**
@@ -113,7 +115,9 @@ kubectl get pods -n three-tier
 Expected output:
 
 frontend     Running
+
 backend      Running
+
 mongodb      Running
 
 6. Check services:
