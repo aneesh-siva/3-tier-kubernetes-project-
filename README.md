@@ -72,20 +72,23 @@ The goal of this project is to demonstrate containerization, Kubernetes deployme
 🐳 Docker Image Build
 
 **Build the application images locally.**
+
 docker build -t frontend-app ./frontend
 docker build -t backend-app:v2 ./backend
 
 
 **☸ Kubernetes Deployment**
 
-1️⃣ Start Minikube
+1️. Start Minikube
 minikube start
-2️⃣ Create Namespace
+
+2️. Create Namespace
 kubectl apply -f k8s/namespace.yaml
-3️⃣ Deploy Application
+
+3️. Deploy Application
 kubectl apply -f k8s/
 
-**🔍 Verify Deployment**
+4. Verify Deployment
 
 **Check the running pods:**
 
@@ -97,13 +100,13 @@ frontend     Running
 backend      Running
 mongodb      Running
 
-**Check services:**
+5. Check services:
 
 kubectl get svc -n three-tier
 
-**🌐 Access the Application**
+6. Access the Application
 
-Expose the frontend service:
+7. Expose the frontend service:
 
 minikube service frontend-service -n three-tier
 
@@ -111,11 +114,11 @@ This will open the application in your browser.
 
 **📊 Kubernetes Dashboard**
 
-Launch the dashboard:
+8. Launch the dashboard:
 
 minikube dashboard
 
-The dashboard provides a visual interface for:
+9. The dashboard provides a visual interface for:
 
 Pods
 Deployments
@@ -141,8 +144,4 @@ Configure Ingress Controller for domain-based routing
 Deploy to a cloud Kubernetes service such as Amazon EKS
 
 **👤 Author**
-Aneesh .S
-
-GitHub:
-
-https://github.com/YOUR_USERNAME
+Aneesh.S
