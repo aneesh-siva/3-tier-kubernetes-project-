@@ -107,8 +107,7 @@ kubectl apply -f k8s/
 
 4. Verify Deployment
 
-**Check the running pods:**
-
+5. Check the running pods
 kubectl get pods -n three-tier
 
 Expected output:
@@ -117,25 +116,22 @@ frontend     Running
 backend      Running
 mongodb      Running
 
-5. Check services:
-
+6. Check services:
 kubectl get svc -n three-tier
 
-6. Access the Application
+7. Access the Application
 
-7. Expose the frontend service:
-
+8. Expose the frontend service:
 minikube service frontend-service -n three-tier
 
 This will open the application in your browser.
 
 **📊 Kubernetes Dashboard**
 
-8. Launch the dashboard:
-
+9. Launch the dashboard:
 minikube dashboard
 
-9. The dashboard provides a visual interface for:
+10. The dashboard provides a visual interface for:
 
 Pods
 Deployments
@@ -159,6 +155,7 @@ Resource usage
 
 
 ✔ Running Kubernetes locally with Minikube
+
 
 
 
