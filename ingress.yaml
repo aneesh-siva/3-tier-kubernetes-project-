@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: three-tier-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: myapp.local
+    http:
+      paths:
+      # Frontend route
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend-app      # Your frontend service name
+            port:
+              number: 5000         # Your frontend service port
+      # Backend API route
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: backend-app       # Your backend service name
+            port:
+              number: 8080         # Your backend service port
