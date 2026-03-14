@@ -6,30 +6,31 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
-mongoose.connect("mongodb://mongodb-service:27017/threetierdb")
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
-
-// Schema
-const ItemSchema = new mongoose.Schema({
-  name: String
+mongoose.connect("mongodb://mongodb-service:27017/mydb", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
-const Item = mongoose.model("Item", ItemSchema);
-
-// Routes
-app.get("/items", async (req, res) => {
-  const items = await Item.find();
-  res.json(items);
+const VisitSchema = new mongoose.Schema({
+  count: Number
 });
 
-app.post("/items", async (req, res) => {
-  const newItem = new Item({ name: req.body.name });
-  await newItem.save();
-  res.json(newItem);
+const Visit = mongoose.model("Visit", VisitSchema);
+
+app.get("/api", async (req, res) => {
+  let visit = await Visit.findOne();
+
+  if (!visit) {
+    visit = new Visit({ count: 1 });
+  } else {
+    visit.count += 1;
+  }
+
+  await visit.save();
+
+  res.json({ message: "Hello from Backend!", visits: visit.count });
 });
 
 app.listen(5000, () => {
-  console.log("Server running on port 5000");
+  console.log("Backend running on port 5000");
 });
