@@ -26,6 +26,4 @@ jobs:
     - name: Push Backend Image
       run: docker push ane21/backend-app:latest
 
-    - name: Deploy to Kubernetes
-      run: |
-        kubectl apply -f k8s/
+    
