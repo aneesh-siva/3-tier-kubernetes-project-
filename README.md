@@ -163,22 +163,76 @@ Resource usage
 
 
 
-**🚀 Future Improvements**
+## 🔄 CI/CD Pipeline
 
-Possible enhancements for this project:
+A Continuous Integration and Continuous Deployment pipeline has been implemented using **GitHub Actions** to automate the build and deployment process.
 
-Implement CI/CD pipeline using GitHub Actions
+### Workflow Overview
+
+1. Code is pushed to the GitHub repository.
+
+2. The CI/CD pipeline is automatically triggered.
+   
+3. Docker images for the frontend and backend services are built.
+   
+4. The images are pushed to Docker Hub.
+   
+5. Kubernetes deployments pull the latest images and update the running services.
+
+### Pipeline Stages
+
+- **Source Control:** GitHub repository
+  
+- **Build:** Docker image build for frontend and backend services
+  
+- **Push:** Images pushed to Docker Hub registry
+  
+- **Deploy:** Kubernetes deployments updated with the latest images
 
 
-Add monitoring stack using Prometheus and Grafana
+## 📊 Monitoring and Observability
+
+Monitoring has been implemented to track the performance and health of the Kubernetes cluster and application services.
+
+### Monitoring Stack
+
+The monitoring stack consists of:
+
+- :contentReference[oaicite:4]{index=4} for metrics collection
+- :contentReference[oaicite:5]{index=5} for metrics visualization
+
+Prometheus collects metrics from Kubernetes components, containers, and application pods. Grafana is used to build dashboards that visualize these metrics in real time.
+
+### Metrics Monitored
+
+The Grafana dashboard includes visualization of:
+
+- CPU usage of pods and containers
+  
+- Memory usage
+  
+- Network receive and transmit bandwidth
+  
+- Pod throughput
+  
+- Storage I/O operations
+  
+- Cluster resource utilization
 
 
-Configure Ingress Controller for domain-based routing
+### Dashboard Configuration
+
+The Grafana dashboard configuration is stored in the repository for reproducibility:
 
 
-Deploy to a cloud Kubernetes service such as Azure AKS
+This allows the dashboard to be imported directly into Grafana to recreate the same monitoring setup.
 
 
+### Monitoring Architecture
+
+Kubernetes → Prometheus → Grafana Dashboard
+
+Prometheus scrapes metrics from Kubernetes nodes, pods, and services, while Grafana queries Prometheus to display real-time monitoring dashboards.
 
 **👤 Author**
 Aneesh.S
