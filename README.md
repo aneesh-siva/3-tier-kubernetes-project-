@@ -64,28 +64,42 @@ The goal of this project is to demonstrate containerization, Kubernetes deployme
    MongoDB :- NoSQL database
 
 
-**📂 Project Structure**
+** Project structure **
 
-3-tier-kubernetes-project
+
+3-tier-kubernetes-project/
 │
-├── frontend
-│   ├── app.py
-│   ├── requirements.txt
-│   └── Dockerfile
+├── backend/                      
+│   ├── server.js                
+│   ├── package.json              
+│   ├── package-lock.json         
+│   └── Dockerfile               
 │
-├── backend
-│   ├── app.py
-│   ├── requirements.txt
-│   └── Dockerfile
+├── frontend/                     
+│   ├── src/
+│   │   ├── App.js                
+│   │   └── index.js              
+│   ├── public/
+│   ├── package.json              
+│   ├── package-lock.json         
+│   └── Dockerfile                
 │
-├── k8s
-│   ├── namespace.yaml
-│   ├── mongodb-deployment.yaml
-│   ├── mongodb-service.yaml
-│   ├── backend-deployment.yaml
-│   └── frontend-deployment.yaml
+├── k8s/                          
+│   ├── backend-deployment.yaml   
+│   ├── backend-service.yaml      
+│   ├── frontend-deployment.yaml  
+│   ├── frontend-service.yaml     
+│   ├── mongodb-deployment.yaml   
+│   ├── mongodb-service.yaml                  
+│   └── namespace.yaml            
 │
-└── README.md
+├── monitoring/                   
+│   ├─ dashboard.json             
+│
+├── ci-cd/                                       
+│   └── build-scripts/            
+│
+├── README.md                    
 
 
 🐳 Docker Image Build
@@ -214,8 +228,6 @@ The Grafana dashboard includes visualization of:
 - Network receive and transmit bandwidth
   
 - Pod throughput
-  
-- Storage I/O operations
   
 - Cluster resource utilization
 
