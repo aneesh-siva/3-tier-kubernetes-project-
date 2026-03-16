@@ -14,6 +14,7 @@ Database Layer – MongoDB database storing application data
 
 The goal of this project is to demonstrate containerization, Kubernetes deployments, service communication, and namespace management in a local Kubernetes cluster.
 
+
 🏗 **Architecture**
 
         User Browser
@@ -63,43 +64,7 @@ The goal of this project is to demonstrate containerization, Kubernetes deployme
    
    MongoDB :- NoSQL database
 
-
-** Project structure **
-
-
-3-tier-kubernetes-project/
-│
-├── backend/                      
-│   ├── server.js                
-│   ├── package.json              
-│   ├── package-lock.json         
-│   └── Dockerfile               
-│
-├── frontend/                     
-│   ├── src/
-│   │   ├── App.js                
-│   │   └── index.js              
-│   ├── public/
-│   ├── package.json              
-│   ├── package-lock.json         
-│   └── Dockerfile                
-│
-├── k8s/                          
-│   ├── backend-deployment.yaml   
-│   ├── backend-service.yaml      
-│   ├── frontend-deployment.yaml  
-│   ├── frontend-service.yaml     
-│   ├── mongodb-deployment.yaml   
-│   ├── mongodb-service.yaml                  
-│   └── namespace.yaml            
-│
-├── monitoring/                   
-│   ├─ dashboard.json             
-│
-├── ci-cd/                                       
-│   └── build-scripts/            
-│
-├── README.md                    
+   
 
 
 🐳 Docker Image Build
@@ -156,24 +121,6 @@ Deployments
 Services
 Logs
 Resource usage
-
-
-**🎯 Key Learning Outcomes**
-
-✔ Containerizing applications using Docker
-
-
-✔ Deploying multi-tier applications on Kubernetes
-
-
-✔ Managing Kubernetes Deployments and Services
-
-
-✔ Using namespaces for resource isolation
-
-
-✔ Running Kubernetes locally with Minikube
-
 
 
 
@@ -245,6 +192,33 @@ This allows the dashboard to be imported directly into Grafana to recreate the s
 Kubernetes → Prometheus → Grafana Dashboard
 
 Prometheus scrapes metrics from Kubernetes nodes, pods, and services, while Grafana queries Prometheus to display real-time monitoring dashboards.
+
+
+
+
+**🎯 Key Learning Outcomes**
+
+1. Containerizing applications using Docker
+
+
+2. Deploying multi-tier applications on Kubernetes
+
+
+3. Managing Kubernetes Deployments and Services
+
+
+4. Using namespaces for resource isolation
+
+
+5. Running Kubernetes locally with Minikube
+
+
+6. Implementing monitoring and dashboards with Prometheus & Grafana
+   
+
+7. Designing CI/CD pipelines for automated Kubernetes deployment
+
+   
 
 **👤 Author**
 Aneesh.S
